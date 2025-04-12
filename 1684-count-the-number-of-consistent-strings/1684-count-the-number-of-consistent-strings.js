@@ -3,6 +3,7 @@
  * @param {string[]} words
  * @return {number}
  */
+ 
 var countConsistentStrings = function(allowed, words) {
     const set = new Set(allowed)
 
@@ -15,9 +16,7 @@ var countConsistentStrings = function(allowed, words) {
                 break
             }
         }
-        
         isConsistent && count++ 
-        
     }
     return count 
 };
