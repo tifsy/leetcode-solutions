@@ -4,5 +4,5 @@
  * @return {number}
  */
 var numberOfEmployeesWhoMetTarget = function(hours, target) {
-    return hours.filter(a => a >= target).length
+    return hours.filter((a) => a >= target).length
 };
