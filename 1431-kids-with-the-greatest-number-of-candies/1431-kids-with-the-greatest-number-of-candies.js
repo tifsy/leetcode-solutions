@@ -4,18 +4,6 @@
  * @return {boolean[]}
  */
 var kidsWithCandies = function(candies, extraCandies) {
-    let ans = []
-
-    for(let i in candies){
-        let temp = [...candies]
-        temp[i] += extraCandies
-
-        let res = false 
-        if(Math.max(...temp) === temp[i]){
-            res = true
-        }
-        ans.push(res)
-    }
-
-    return ans 
+    const max = Math.max(...candies)
+    return candies.map(a => a + extraCandies >= max)
 };
