@@ -5,10 +5,10 @@
  */
 var numJewelsInStones = function(jewels, stones) {
     let count = 0
-    const jewelsArr = [...jewels]
+    const jewelsSet = new Set(jewels)
 
     for(let stone of stones){
-        jewelsArr.includes(stone) && count++
+        jewelsSet.has(stone) && count++
     }
     return count 
 };
