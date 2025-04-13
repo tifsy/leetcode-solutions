@@ -4,6 +4,6 @@
  */
 var finalValueAfterOperations = function(operations) {
     let value = 0
-    operations.forEach(op => (op === '--X' || op === 'X--') ? value-- : value++)
+    operations.forEach(op => op.includes('--') ? value-- : value++)
     return value
 };
