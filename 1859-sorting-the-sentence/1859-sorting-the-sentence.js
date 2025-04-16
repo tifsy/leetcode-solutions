@@ -9,7 +9,7 @@ var sortSentence = function(s) {
 
     for(let a of arr){
         const index = [...a].pop()
-        const str = a.slice(0, a.length - 1)
+        const str = a.substring(0, a.length - 1)
 
         ans[index - 1] = str
     }
