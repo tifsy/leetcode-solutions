@@ -4,6 +4,10 @@
  */
 var arrayPairSum = function(nums) {
     const sorted = nums.sort((a, b) => a - b)
-    
-    return sorted.filter((_, i) => i % 2 === 0).reduce((acc, cur) => acc + cur, 0)
+    let ans = 0
+
+    for(let i = 0; i < sorted.length; i += 2){
+        ans += sorted[i]
+    }
+    return ans
 };
